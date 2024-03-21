@@ -11,20 +11,26 @@
     <h1>Temperature converter</h1>
     <form id="temperature-form">
         <label for="user-input">temperature</label>
-        <input type="text" name="" id="user-input" value="20">
+        <input type="text" id="user-input" value="20">
         <label for="from-input">from</label>
-        <select name="" id="">
+        <select id="origin-scale">
             <option value="c" selected>Celsius</option>
             <option value="f">Fahrenheit</option>
             <option value="k">Kelvin</option>
         </select>
         <label for="to-input">to</label>
-        <select name="" id="">
+        <select id="destination-scale">
             <option value="c">Celsius</option>
             <option value="f" selected>Fahrenheit</option>
             <option value="k">Kelvin</option>
         </select>
         <output>68 F</output>
+        <script src="js/converter.js"></script>
+        <script>
+            if("serviceWorker" in navigator) {
+                navigator.serviceWorker.register('serviceWorker.js', {scope: '/'});
+            }
+        </script>
     </form>
 </body>
 </html>
